@@ -1,66 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Smaran Vallabhaneni</title>
-                <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        
-        <nav>
-            <div class="container">
-                <a href="/" class="logo">S_VALLABHANENI</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smaran Vallabhaneni — Computing Engineering @ Olin '26</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+
+    <div class="gradient-bg"></div>
+    <div class="cursor"></div>
+
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#" class="logo">S_VALLABHANENI</a>
                 <div class="nav-links">
-                    <a href="#projects">PROJECTS</a>
-                    <a href="#contact">CONTACT</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
                 </div>
             </div>
-        </nav>
-        
-        <main class="container">
-            <section class="hero">
-                <h1>SMARAN VALLABHANENI</h1>
-                <p class="hero-sub">Software, Systems, Math, Music, and Beagles</p>
-                <div class="links">
-                    <a href="https://github.com/happysmaran" target="_blank">[GITHUB]</a>
-                    <a href="https://www.linkedin.com/in/smaran-vallabhaneni/" target="_blank">[LINKEDIN]</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section class="hero" id="about">
+            <h1>Smaran<br>Vallabhaneni</h1>
+            <p class="hero-sub">SOFTWARE · SYSTEMS · MATH · AI · MUSIC · BEAGLES</p>
+
+            <div class="bio-glass">
+                <p>I'm a first-year Computing Engineering student at Olin College of Engineering, passionate about making computers feel fast, elegant, and someting to marvel. I build from symbolic math engines that differentiate complex expressions in milliseconds, to native macOS utilities that bring back the joy of classic system apps, all powered by AI-assisted pipelines that accelerate real engineering workflows.</p>
+                <br>
+                <p>Regardless of whether it's wiring up and coding ROS telemetry for autonomous aircraft, working on competitive programming problems, or researching memory safety and stability in C++, I love to solve hard problems with clean, performant, and scalable code. Outside of terminals and IDEs I spend most of my time listening to music, reading books, and doodling.</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/happysmaran" target="_blank">[GitHub]</a>
+                <a href="https://linkedin.com/in/smaran-vallabhaneni" target="_blank">[LinkedIn]</a>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2 class="section-label">EXPERIENCE</h2>
+            <div class="timeline">
+                <div class="exp-item">
+                    <div class="exp-content">
+                        <div class="exp-date">Sep 2025 – Present <span class="ongoing-pill">Ongoing</span></div>
+                        <h3>Head of Ground Station Development</h3>
+                        <p>Olin AERO — Software Engineer on AUVSI SUAS competition aircraft. Built ground station software using ArduPilot, Mission Planner, MAVROS, and ROS on Jetson for real-time telemetry, safety monitoring, and image-recognition target delivery.</p>
+                    </div>
+                    <div class="exp-dot"></div>
                 </div>
-            </section>
-            
-            <section id="projects">
-                <h2 class="section-title">PROJECT_LOG</h2>
-                
-                <div class="project">
-                    <div class="project-header">
-                        <h3>CLOS / Command Line OS</h3>
-                        <a href="https://happysmaran.github.io/CLOS/" target="_blank">[SITE]</a>
+
+                <div class="exp-item">
+                    <div class="exp-content">
+                        <div class="exp-date">Feb 2026 – Present <span class="ongoing-pill">Ongoing</span></div>
+                        <h3>ICPC Competitive Programmer</h3>
+                        <p>Olin ICPC Team — Tackling graph algorithms, dynamic programming, segment trees, geometry, and network flow under time pressure in virtual contests.</p>
                     </div>
-                    <div class="stack">JAVA // C++ // CUSTOM_MATH_ENGINE</div>
-                    <img src="https://happysmaran.github.io/CLOS/images/index/demo_image2.png" alt="CLOS Demo" class="project-img">
-                        <p>Terminal/graphical utility focused on complex mathematics. Features a custom engine for non-real numbers, equation solving, derivatives, integrals, and graphing.</p>
-                        </div>
-                
-                <div class="project">
-                    <div class="project-header">
+                    <div class="exp-dot"></div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-content">
+                        <div class="exp-date">Apr 2024 – Apr 2025</div>
+                        <h3>Full-Stack Android Developer (Intern)</h3>
+                        <p>Geeky Insights — Designed and shipped customizable audio alarm clock app using Flutter, Dart, Java. Full frontend/backend + cross-device compatibility and accessibility focus.</p>
+                    </div>
+                    <div class="exp-dot"></div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-content">
+                        <div class="exp-date">2024–2025</div>
+                        <h3>Research Publications</h3>
+                        <p>Published on C++ memory safety vs Java GC, and performance comparison of C++/Java on Android for sorting/searching algorithms (Research Archive of Rising Scholars).</p>
+                    </div>
+                    <div class="exp-dot"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2 class="section-label">FEATURED PROJECTS</h2>
+            <div class="bento-grid">
+
+                <a href="https://github.com/happysmaran/clos" target="_blank" class="bento-item project-link">
+                    <img class="bento-img" src="clos.png" alt="CLOS">
+                    <div class="bento-overlay">
+                        <span class="pill">C++ // Java</span>
+                        <h3>CLOS</h3>
+                        <p>Recursive descent symbolic math engine with custom differentiation, integration, non-real support, graphing, and CLI + Java GUI frontend.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/happysmaran/classictunes" target="_blank" class="bento-item project-link">
+                    <img class="bento-img" src="classictunes.png" alt="ClassicTunes">
+                    <div class="bento-overlay">
+                        <span class="pill">SwiftUI</span>
                         <h3>ClassicTunes</h3>
-                        <a href="https://happysmaran.github.io/ClassicTunes/" target="_blank">[SITE]</a>
+                        <p>Native macOS audio player reviving legacy iTunes aesthetics with modern performance and system audio integration.</p>
                     </div>
-                    <div class="stack">SWIFT // SWIFTUI // MACOS</div>
-                    <img src="https://raw.githubusercontent.com/happysmaran/ClassicTunes/refs/heads/master/classictunes.png" alt="ClassicTunes Demo" class="project-img">
-                        <p>Native macOS music player built to restore the classic iTunes utility and aesthetic. Developed from scratch in response to macOS Tahoe changes.</p>
-                        </div>
-            </section>
-            
-            <section id="contact">
-                <h2 class="section-title">COMMUNICATIONS</h2>
-                <p>smaranvallabhaneni@gmail.com</p>
-            </section>
-        </main>
-        
-        <footer>
-            <p>TERMINAL_SESSION_ACTIVE // 2026</p>
-        </footer>
-        
-    </body>
+                </a>
+
+                <a href="https://github.com/happysmaran/mousesteering" target="_blank" class="bento-item project-link">
+                    <img class="bento-img" src="mousesteer.jpg" alt="MouseSteering">
+                    <div class="bento-overlay">
+                        <span class="pill">C# // .NET</span>
+                        <h3>MouseSteering</h3>
+                        <p>Utility mapping mouse movement to virtual joystick axes for precise analog control in racing sims and games.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/rivques/whoa-scope" target="_blank" class="bento-item project-link">
+                    <img class="bento-img" src="whoascope.png" alt="Whoa-Scope">
+                    <div class="bento-overlay">
+                        <span class="pill">Python // Kivy // Collab w/ @rivques</span>
+                        <h3>Whoa-Scope</h3>
+                        <p>The modernized open-source oscilloscope tool for hardware labs at Olin. Featuring themes, accessibility fonts, native file export tooltips, stability fixes, and more.</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>SMARAN VALLABHANENI // 2026</p>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.hero, .section').forEach(el => observer.observe(el));
+
+        // Custom cursor?
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.addEventListener('mousedown', () => cursor.classList.add('active'));
+        document.addEventListener('mouseup', () => cursor.classList.remove('active'));
+    </script>
+
+</body>
 </html>
