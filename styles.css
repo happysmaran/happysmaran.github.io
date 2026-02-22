@@ -1262,3 +1262,36 @@ body {
         display: none !important;
     }
 }
+
+/* Reduce size of hero text on mobile */
+@media (max-width: 930px) {
+    .hero {
+        padding: 100px 0 60px !important;  /* less top/bottom padding */
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 10vw, 4.2rem) !important;
+        letter-spacing: -2.5px !important;
+        line-height: 0.92 !important;
+    }
+
+    .hero-sub.main-tagline {
+        font-size: 1rem !important;     /* college line smaller */
+        margin: 12px 0 6px !important;
+    }
+
+    .hero-sub.degree-line {
+        font-size: 0.9rem !important;     /* the | separated skills line */
+        line-height: 1.4 !important;
+        letter-spacing: 0.8px !important;
+        word-break: break-all;             /* prevents awkward wrapping */
+        hyphens: auto;
+    }
+
+    .bio-glass {
+        font-size: 1.02rem !important;
+        line-height: 1.65 !important;
+        padding: 20px !important;
+        margin: 24px 0 !important;
+    }
+}
