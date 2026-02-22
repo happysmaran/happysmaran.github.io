@@ -1,3 +1,4 @@
+/* Global Variables which I am definitely using and did not forget anywhere */
 :root {
     --bg-dark: #050505;
     --accent: #007aff;
@@ -32,6 +33,61 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skills-group {
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 32px;
+    transition: var(--transition);
+}
+
+.skills-group:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px rgba(0, 122, 255, 0.1);
+}
+
+.subsection-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accent-glow);
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: rgba(0, 122, 255, 0.08);
+    color: var(--accent-glow);
+    border: 1px solid rgba(0, 122, 255, 0.15);
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    background: rgba(0, 122, 255, 0.16);
+    border-color: var(--accent);
+    transform: translateY(-2px);
 }
 
 /* Glass Nav */
@@ -84,6 +140,43 @@ nav {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hero-tagline-group {
+    margin-top: 8px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.25;
+}
+
+.hero-sub {
+    margin: 0;
+    font-weight: 600;
+}
+
+.hero-sub.main-tagline {
+    font-size: 1.5rem;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.hero-sub.degree-line {
+    font-size: 1.25rem;
+    color: var(--accent-glow);
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.hero-sub.semester-line {
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-weight: 400;
+    opacity: 0.85;
+    margin: 0;
+    padding-top: 0 !important;
 }
 
 .hero.visible {
@@ -158,53 +251,68 @@ nav {
     font-weight: 500;
 }
 
-/* Capabilities Grid */
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
+.skills-compact {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.cap-card {
-    background: var(--glass);
-    backdrop-filter: blur(16px);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 32px;
-    transition: var(--transition);
-}
-
-.cap-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: var(--accent);
-    box-shadow: 0 20px 60px rgba(0,122,255,0.12);
-}
-
-.cap-header {
+.skills-row {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 16px 32px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--glass-border);
 }
 
-.cap-icon {
-    font-size: 2.2rem;
-    color: var(--accent);
+.skills-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.tags span {
-    font-size: 0.75rem;
-    background: rgba(0,122,255,0.12);
+.compact-label {
+    font-size: 1.15rem;
+    font-weight: 600;
     color: var(--accent-glow);
-    padding: 6px 12px;
-    border-radius: 20px;
-    margin-right: 8px;
+    min-width: 160px;
+    flex-shrink: 0;
+}
+
+.compact-tags {
+    flex: 1;
+    gap: 10px 14px;
+}
+
+.compact-tags .skill-tag {
+    font-size: 0.92rem;
+    padding: 6px 14px;
+    background: rgba(0, 122, 255, 0.06);
+    border: 1px solid rgba(0, 122, 255, 0.12);
+}
+
+@media (max-width: 700px) {
+    .skills-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .compact-label {
+        min-width: auto;
+        font-size: 1.1rem;
+    }
+    
+    .compact-tags {
+        gap: 8px 12px;
+    }
 }
 
 /* Bento Projects */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Force 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 420px;
     gap: 32px;
 }
@@ -255,7 +363,7 @@ nav {
 .bento-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.88), transparent 40%);
+    background: linear-gradient(to top, rgba(0,0,0,0.88), transparent 75%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -289,6 +397,85 @@ nav {
     border-radius: 30px;
     width: fit-content;
     margin-bottom: 12px;
+}
+
+.pills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.pill {
+    margin-bottom: 0; 
+    font-size: 0.73rem;
+    padding: 5px 11px;
+    white-space: nowrap;
+}
+
+/* Certification cards */
+.cert-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.cert-item {
+    transition: var(--transition);
+}
+
+.cert-item:hover {
+    transform: translateY(-6px);
+}
+
+.cert-preview {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: rgba(0, 122, 255, 0.05);
+}
+
+.cert-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.cert-item:hover .cert-image {
+    transform: scale(1.04);
+}
+
+/* Make timeline line and dot look good with image cards */
+@media (min-width: 901px) {
+    .cert-preview {
+        max-width: 420px;
+        margin: 0 auto 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cert-preview {
+        margin: 0 0 20px 60px;
+        max-width: 280px;
+    }
+}
+
+/* Slightly tighter on desktop when many tags are present */
+@media (min-width: 901px) {
+    .pill {
+        font-size: 0.70rem;
+        padding: 4.5px 10px;
+    }
+}
+
+/* Hover effect now applies to ALL pills (looks great) */
+.bento-item:hover .pill {
+    background: var(--orange);
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .ongoing-pill {
@@ -362,6 +549,196 @@ nav {
     box-shadow: 0 0 0 6px rgba(0,122,255,0.2);
 }
 
+@media (min-width: 901px) {
+    .cert-preview {
+        margin: 0 0 32px auto !important;   /* push to right side of its parent block */
+        transform: translateX(-100px);
+    }
+}
+
+@media (max-width: 900px) {
+    .cert-preview {
+        margin: 0 0 28px 65px !important;
+        transform: none;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Kill the center vertical line on small screens — looks cleaner */
+    .timeline::before {
+        display: none;                      /* or left: 30px; if you want to keep a subtle line */
+    }
+
+    /* Reset item layout to pure vertical stack */
+    .exp-item {
+        flex-direction: column !important;
+        align-items: center;
+        margin: 60px 0;                     /* balanced vertical spacing */
+        position: relative;
+    }
+
+    /* Dot below everything, centered */
+    .exp-dot {
+        position: relative;                 /* no longer absolute */
+        left: auto !important;
+        transform: none !important;
+        margin: 24px auto 0 auto;           /* space above dot */
+        order: 3;                           /* ensure it's last in flow */
+    }
+
+    /* Image first, centered, reasonable size */
+    .cert-preview {
+        margin: 0 auto 20px auto !important;
+        max-width: 90%;                     /* almost full-width but not overflowing */
+        width: 320px;                       /* fixed comfortable size; adjust to taste */
+        transform: none !important;
+        order: 1;
+    }
+
+    .cert-image {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    /* Text block below image, centered or left-aligned */
+    .exp-content {
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 420px;
+        text-align: center;                 /* or left if you prefer */
+        padding: 20px 16px;
+        order: 2;
+    }
+
+    .exp-content h3 {
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+    }
+
+    .exp-content p {
+        font-size: 0.95rem;
+    }
+
+    .exp-date {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        color: var(--accent-glow);
+    }
+
+    /* Make whole card feel clickable */
+    .cert-item-link {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    /* Optional: subtle connecting line per item if you miss the timeline feel */
+    .exp-item::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background: var(--glass-border);
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .exp-item:last-child::after {
+        display: none;
+    }
+}
+
+/* About page specific layout */
+.about-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;                /* vertically centers the two columns relative to each other */
+    justify-items: stretch;             /* make sure both columns take full height of the row */
+    max-width: 1100px;
+    margin: 48px auto 0;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;            /* helps if we ever wrap text in extra containers */
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.78;
+    margin-bottom: 1.6em;
+    color: var(--text);
+}
+
+.about-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+.about-photo {
+    display: flex;
+    align-items: center;                /* centers the image vertically inside its grid cell */
+    justify-content: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 60px rgba(0, 122, 255, 0.12);
+    transition: var(--transition);
+}
+
+.about-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(0, 122, 255, 0.2);
+    border-color: var(--accent);
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1.02rem;
+    }
+
+    .about-image {
+        max-width: 360px;
+        margin: 0 auto;
+        border-radius: 24px;
+    }
+
+    .about-section {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+}
+
 /* Footer */
 footer {
     padding: 80px 0 40px;
@@ -392,6 +769,41 @@ body {
     transform: translate(-50%, -50%) scale(2.5);
     background: var(--accent);
     opacity: 0.3;
+}
+
+.group-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-glow);
+    margin: 48px 0 24px;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+
+.group-heading:first-child {
+    margin-top: 16px;
+}
+
+.skills-row:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Publications */
+.publication-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.publication-link:hover .exp-content {
+    border-color: var(--accent-glow);
+    transform: translateY(-4px);
+}
+
+.timeline .exp-item:not(:has(.cert-preview)) .exp-dot {
+    left: 50% !important;
 }
 
 /* Mobile optimizations */
@@ -467,9 +879,22 @@ body {
     }
 
     .bento-grid {
-        grid-template-columns: 1fr;            /* 1 column → becomes 1×4 vertically */
-        grid-auto-rows: minmax(320px, auto);   /* Slightly shorter cards on mobile to reduce scrolling */
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(320px, auto);
         gap: 24px;
+    }
+
+    .skills-container {
+        gap: 36px;
+    }
+
+    .skills-group {
+        padding: 24px;
+    }
+
+    .skill-tag {
+        font-size: 0.9rem;
+        padding: 7px 14px;
     }
 }
 
@@ -480,4 +905,147 @@ body {
     body {
         cursor: none !important;
     }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(5,5,5,0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    pointer-events: none;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mobile-menu-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.mobile-menu a {
+    color: var(--text);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.mobile-menu a:hover {
+    color: var(--accent);
+}
+
+.close-menu {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-menu:hover {
+    color: var(--accent);
+    transform: rotate(90deg);
+}
+
+.desktop-nav {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .nav-inner {
+        justify-content: space-between;
+    }
+}
+
+footer {
+    padding: 80px 0 60px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+footer .social-links {
+    margin-bottom: 24px;
+}
+
+footer .social-links a {
+    color: var(--text-dim);
+    font-size: 1.8rem;
+    margin: 0 20px;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+footer .social-links i {
+    transition: var(--transition);
+}
+
+footer p {
+    margin-top: 16px;
+    font-size: 0.85rem;
 }

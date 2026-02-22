@@ -6,20 +6,29 @@
     <title>Smaran Vallabhaneni</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
     <div class="gradient-bg"></div>
     <div class="cursor"></div>
 
     <nav>
         <div class="container">
             <div class="nav-inner">
-                <a href="#" class="logo">S_VALLABHANENI</a>
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
+                <a href="index.html" class="logo">S_VALLABHANENI</a>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-links desktop-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="index.html#skills">Skills</a>
+                    <a href="index.html#projects">Projects</a>
+                    <a href="index.html#certifications">Certifications</a>
+                    <a href="index.html#research">Research & Publications</a>
                 </div>
             </div>
         </div>
@@ -29,57 +38,128 @@
 
         <section class="hero" id="about">
             <h1>Smaran<br>Vallabhaneni</h1>
-            <p class="hero-sub">SOFTWARE · SYSTEMS · MATH · AI · MUSIC · BEAGLES</p>
+            <p class="hero-sub main-tagline">Engineering in Computing Student @ Olin College of Engineering</p>
+            <p class="hero-sub degree-line">SOFTWARE | SYSTEMS | MATH | AI INTEGRATION | DATA SCIENCE | ICPC</p>
 
             <div class="bio-glass">
-                <p>I'm a first-year Computing Engineering student at Olin College of Engineering, passionate about making computers feel fast, elegant, and someting to marvel. I build from symbolic math engines that differentiate complex expressions in milliseconds, to native macOS utilities that bring back the joy of classic system apps, all powered by AI-assisted pipelines that accelerate real engineering workflows.</p>
-                <br>
-                <p>Regardless of whether it's wiring up and coding ROS telemetry for autonomous aircraft, working on competitive programming problems, or researching memory safety and stability in C++, I love to solve hard problems with clean, performant, and scalable code. Outside of terminals and IDEs I spend most of my time listening to music, reading books, and doodling.</p>
-            </div>
-
-            <div class="social-links">
-                <a href="https://github.com/happysmaran" target="_blank">[GitHub]</a>
-                <a href="https://linkedin.com/in/smaran-vallabhaneni" target="_blank">[LinkedIn]</a>
+                <p>I'm a first-year engineering student passionate about crafting scalable systems and pushing the boundaries of AI in real-world applications. With a strong foundation in full-stack development and backend architecture, I specialize in building smart, data-driven solutions, from LLM-powered workflows to RAG / machine learning pipelines.</p>
             </div>
         </section>
 
-        <section class="section" id="experience">
-            <h2 class="section-label">EXPERIENCE</h2>
-            <div class="timeline">
-                <div class="exp-item">
-                    <div class="exp-content">
-                        <div class="exp-date">Sep 2025 – Present <span class="ongoing-pill">Ongoing</span></div>
-                        <h3>Head of Ground Station Development</h3>
-                        <p>Olin AERO — Software Engineer on AUVSI SUAS competition aircraft. Built ground station software using ArduPilot, Mission Planner, MAVROS, and ROS on Jetson for real-time telemetry, safety monitoring, and image-recognition target delivery.</p>
+        <section class="section" id="skills">
+            <h2 class="section-label">SKILLS</h2>
+
+            <div class="skills-compact">
+
+                <h3 class="group-heading">Technical</h3>
+                <div class="skills-row">
+                    <h3 class="compact-label">Programming Languages</h3>
+                    <div class="skills-tags compact-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">NumPy / matplotlib</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Kivy</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">SwiftUI</span>
+                        <span class="skill-tag">Metal API</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">LaTeX</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">React / React Native</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">PBASIC</span>
+                        <span class="skill-tag">MATLAB</span>
                     </div>
-                    <div class="exp-dot"></div>
                 </div>
 
-                <div class="exp-item">
-                    <div class="exp-content">
-                        <div class="exp-date">Feb 2026 – Present <span class="ongoing-pill">Ongoing</span></div>
-                        <h3>ICPC Competitive Programmer</h3>
-                        <p>Olin ICPC Team — Tackling graph algorithms, dynamic programming, segment trees, geometry, and network flow under time pressure in virtual contests.</p>
+                <div class="skills-row">
+                    <h3 class="compact-label">Tools</h3>
+                    <div class="skills-tags compact-tags">
+                        <span class="skill-tag">Fusion360</span>
+                        <span class="skill-tag">AutoCAD</span>
+                        <span class="skill-tag">Autodesk</span>
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe Creative Suite</span>
+                        <span class="skill-tag">Microsoft Excel</span>
+                        <span class="skill-tag">IntelliJ</span>
+                        <span class="skill-tag">Visual Studio / Code</span>
+                        <span class="skill-tag">Xcode</span>
+                        <span class="skill-tag">Overleaf</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Tableau Desktop</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">MissionPlanner</span>
+                        <span class="skill-tag">ArduPilot</span>
+                        <span class="skill-tag">GitHub Copilot</span>
                     </div>
-                    <div class="exp-dot"></div>
                 </div>
 
-                <div class="exp-item">
-                    <div class="exp-content">
-                        <div class="exp-date">Apr 2024 – Apr 2025</div>
-                        <h3>Full-Stack Android Developer (Intern)</h3>
-                        <p>Geeky Insights — Designed and shipped customizable audio alarm clock app using Flutter, Dart, Java. Full frontend/backend + cross-device compatibility and accessibility focus.</p>
+                <div class="skills-row">
+                    <h3 class="compact-label">Operating Systems</h3>
+                    <div class="skills-tags compact-tags">
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">macOS (Intel and Apple Silicon)</span>
+                        <span class="skill-tag">Linux (Debian, Arch, Raspberry Pi OS)</span>
                     </div>
-                    <div class="exp-dot"></div>
                 </div>
 
-                <div class="exp-item">
-                    <div class="exp-content">
-                        <div class="exp-date">2024–2025</div>
-                        <h3>Research Publications</h3>
-                        <p>Published on C++ memory safety vs Java GC, and performance comparison of C++/Java on Android for sorting/searching algorithms (Research Archive of Rising Scholars).</p>
+                <div class="skills-row">
+                    <h3 class="compact-label">Frameworks</h3>
+                    <div class="skills-tags compact-tags">
+                        <span class="skill-tag">Simulink</span>
+                        <span class="skill-tag">SBCs</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">Version Control</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">RAG Systems</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Internet of Things (IoT)</span>
+                        <span class="skill-tag">Amazon Web Services (AWS)</span>
+                        <span class="skill-tag">Google Cloud Platform (GCP)</span>
+                        <span class="skill-tag">Microsoft Azure</span>
+                        <span class="skill-tag">Cloud Computing</span>
+                        <span class="skill-tag">Dev Ops</span>
+                        <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">Databases</span>
+                        <span class="skill-tag">Database Management</span>
+                        <span class="skill-tag">Testing and Debugging</span>
+                        <span class="skill-tag">Algorithm Development</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">System Design</span>
+                        <span class="skill-tag">ROS/MAVROS</span>
+                        <span class="skill-tag">Embedded Systems</span>
                     </div>
-                    <div class="exp-dot"></div>
+                </div>
+
+                <h3 class="group-heading">Soft Skills</h3>
+                <div class="skills-row" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                    <div class="skills-tags compact-tags">
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Adaptability</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Attention to Detail</span>
+                    </div>
                 </div>
 
             </div>
@@ -89,53 +169,279 @@
             <h2 class="section-label">FEATURED PROJECTS</h2>
             <div class="bento-grid">
 
-                <a href="https://github.com/happysmaran/clos" target="_blank" class="bento-item project-link">
-                    <img class="bento-img" src="clos.png" alt="CLOS">
-                    <div class="bento-overlay">
-                        <span class="pill">C++ // Java</span>
-                        <h3>CLOS</h3>
-                        <p>Recursive descent symbolic math engine with custom differentiation, integration, non-real support, graphing, and CLI + Java GUI frontend.</p>
+            <!-- CLOS -->
+            <a href="https://happysmaran.github.io/CLOS/" target="_blank" class="bento-item project-link">
+                <img class="bento-img" src="clos.png" alt="CLOS">
+                <div class="bento-overlay">
+                    <div class="pills-container">
+                        <span class="pill">Java</span>
+                        <span class="pill">C++</span>
+                        <span class="pill">C</span>
+                        <span class="pill">HTML</span>
+                        <span class="pill">CSS</span>
+                        <span class="pill">MySQL</span>
+                        <span class="pill">IntelliJ</span>
+                        <span class="pill">Visual Studio / Code</span>
+                        <span class="pill">Git</span>
+                        <span class="pill">Version Control</span>
+                        <span class="pill">UI/UX</span>
+                        <span class="pill">Databases</span>
+                        <span class="pill">Database Management</span>
+                        <span class="pill">Testing and Debugging</span>
+                        <span class="pill">Algorithm Development</span>
+                        <span class="pill">Data Structures</span>
                     </div>
-                </a>
+                    <h3>CLOS</h3>
+                    <p>Recursive descent symbolic math engine with custom differentiation, integration, non-real support, graphing, and CLI + Java GUI frontend.</p>
+                </div>
+            </a>
 
-                <a href="https://github.com/happysmaran/classictunes" target="_blank" class="bento-item project-link">
-                    <img class="bento-img" src="classictunes.png" alt="ClassicTunes">
-                    <div class="bento-overlay">
+            <!-- ClassicTunes -->
+            <a href="https://happysmaran.github.io/ClassicTunes/" target="_blank" class="bento-item project-link">
+                <img class="bento-img" src="classictunes.png" alt="ClassicTunes">
+                <div class="bento-overlay">
+                    <div class="pills-container">
+                        <span class="pill">Swift</span>
                         <span class="pill">SwiftUI</span>
-                        <h3>ClassicTunes</h3>
-                        <p>Native macOS audio player reviving legacy iTunes aesthetics with modern performance and system audio integration.</p>
+                        <span class="pill">Metal API</span>
+                        <span class="pill">Adobe Creative Suite</span>
+                        <span class="pill">Xcode</span>
+                        <span class="pill">GitHub Copilot</span>
+                        <span class="pill">Git</span>
+                        <span class="pill">Version Control</span>
+                        <span class="pill">CI/CD Pipelines</span>
+                        <span class="pill">UI/UX</span>
+                        <span class="pill">RAG Systems</span>
+                        <span class="pill">Ollama</span>
+                        <span class="pill">Databases</span>
+                        <span class="pill">Database Management</span>
+                        <span class="pill">Testing and Debugging</span>
+                        <span class="pill">Algorithm Development</span>
+                        <span class="pill">Data Structures</span>
+                        <span class="pill">Encryption</span>
+                    </div>
+                    <h3>ClassicTunes</h3>
+                    <p>Native macOS audio player reviving legacy iTunes aesthetics with modern performance and system audio integration. Developed with the help of Google Gemini and GitHub Copilot + Qwen 2.5 Coder</p>
+                </div>
+            </a>
+
+            <!-- MouseSteering -->
+            <a href="https://github.com/happysmaran/mousesteering" target="_blank" class="bento-item project-link">
+                <img class="bento-img" src="mousesteer.jpg" alt="MouseSteering">
+                <div class="bento-overlay">
+                    <div class="pills-container">
+                        <span class="pill">C#</span>
+                        <span class="pill">.NET</span>
+                        <span class="pill">Visual Studio Code</span>
+                        <span class="pill">Git</span>
+                        <span class="pill">Version Control</span>
+                        <span class="pill">Testing and Debugging</span>
+                    </div>
+                    <h3>MouseSteering</h3>
+                    <p>Utility mapping mouse movement to virtual joystick axes for precise analog control in racing sims and games.</p>
+                </div>
+            </a>
+
+            <!-- Whoa-Scope -->
+            <a href="https://github.com/rivques/whoa-scope" target="_blank" class="bento-item project-link">
+                <img class="bento-img" src="whoascope.png" alt="Whoa-Scope">
+                <div class="bento-overlay">
+                    <div class="pills-container">
+                        <span class="pill">Python</span>
+                        <span class="pill">matplotlib</span>
+                        <span class="pill">Kivy</span>
+                        <span class="pill">Visual Studio Code</span>
+                        <span class="pill">Git</span>
+                        <span class="pill">Version Control</span>
+                        <span class="pill">CI/CD Pipelines</span>
+                        <span class="pill">UI/UX</span>
+                        <span class="pill">Testing and Debugging</span>
+                        <span class="pill">Embedded Systems</span>
+                    </div>
+                    <h3>Whoa-Scope</h3>
+                    <p>The modernized open-source oscilloscope tool for hardware labs at Olin, made in collaboration. Featuring themes, accessibility fonts, native file export tooltips, stability fixes, and more.</p>
+                </div>
+            </a>
+
+        </div>
+        </section>
+
+        <section class="section" id="certifications">
+            <h2 class="section-label">CERTIFICATIONS</h2>
+            <div class="timeline">
+                
+                <!-- Advanced Embedded Linux Development -->
+                <a href="https://www.coursera.org/account/accomplishments/specialization/ABAE972S1DHU" 
+                target="_blank" 
+                class="cert-item-link">
+                    <div class="exp-item cert-item">
+                        <div class="cert-preview">
+                            <img src="certificates/ucboulder_advlinuxdev.png" 
+                                alt="Advanced Embedded Linux Development Specialization Certificate" 
+                                class="cert-image">
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-date">Feb 2026</div>
+                            <h3>Advanced Embedded Linux Development Specialization</h3>
+                            <p>University of Colorado Boulder (Coursera)<br>Credential ID: ABAE972S1DHU</p>
+                            <p>Skills: Embedded Linux, Bash, Linux Kernel, Buildroot, Docker, Embedded Software Programming</p>
+                        </div>
+                        <div class="exp-dot"></div>
                     </div>
                 </a>
 
-                <a href="https://github.com/happysmaran/mousesteering" target="_blank" class="bento-item project-link">
-                    <img class="bento-img" src="mousesteer.jpg" alt="MouseSteering">
-                    <div class="bento-overlay">
-                        <span class="pill">C# // .NET</span>
-                        <h3>MouseSteering</h3>
-                        <p>Utility mapping mouse movement to virtual joystick axes for precise analog control in racing sims and games.</p>
+                <!-- Meta Database Engineer -->
+                <a href="https://www.coursera.org/account/accomplishments/specialization/M8WKYG9PMT4G" 
+                target="_blank" 
+                class="cert-item-link">
+                    <div class="exp-item cert-item">
+                        <div class="cert-preview">
+                            <img src="certificates/meta_db_engineer.png" 
+                                alt="Meta Database Engineer Specialization Certificate" 
+                                class="cert-image">
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-date">Jul 2025</div>
+                            <h3>Meta Database Engineer Specialization</h3>
+                            <p>Meta (Coursera)<br>Credential ID: M8WKYG9PMT4G</p>
+                            <p>Skills: GitHub, Algorithms, Jupyter, Visual Studio, MySQL, Data Science, Unix, Django, Git, Database Design, Databases, Database Systems, Tableau</p>
+                        </div>
+                        <div class="exp-dot"></div>
                     </div>
                 </a>
 
-                <a href="https://github.com/rivques/whoa-scope" target="_blank" class="bento-item project-link">
-                    <img class="bento-img" src="whoascope.png" alt="Whoa-Scope">
-                    <div class="bento-overlay">
-                        <span class="pill">Python // Kivy // Collab w/ @rivques</span>
-                        <h3>Whoa-Scope</h3>
-                        <p>The modernized open-source oscilloscope tool for hardware labs at Olin. Featuring themes, accessibility fonts, native file export tooltips, stability fixes, and more.</p>
+                <!-- Cryptography I -->
+                <a href="https://www.coursera.org/account/accomplishments/verify/FKCM26PMM8IR" 
+                target="_blank" 
+                class="cert-item-link">
+                    <div class="exp-item cert-item">
+                        <div class="cert-preview">
+                            <img src="certificates/stanford_crypto_1.png" 
+                                alt="Cryptography I Certificate" 
+                                class="cert-image">
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-date">Dec 2024</div>
+                            <h3>Cryptography I</h3>
+                            <p>Stanford University (Coursera)<br>Credential ID: FKCM26PMM8IR</p>
+                            <p>Skills: Algorithms, Visual Studio, Cryptography, Probability, Encryption, Graph Theory</p>
+                        </div>
+                        <div class="exp-dot"></div>
+                    </div>
+                </a>
+
+                <!-- Statistics for Data Science Essentials -->
+                <a href="https://coursera.org/verify/RW99EB1AFB38" target="_blank" class="cert-item-link">
+                    <div class="exp-item cert-item">
+                        <div class="cert-preview">
+                            <img src="certificates/upenn_stats.png" alt="Statistics for Data Science Essentials Certificate" class="cert-image">
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-date">Nov 2024</div>
+                            <h3>Statistics for Data Science Essentials</h3>
+                            <p>University of Pennsylvania (Coursera)<br>Credential ID: RW99EB1AFB38</p>
+                            <p>Skills: Algorithm Development, Algorithms, Probability, Sampling, Data Science, Statistics, Statistical Inference</p>
+                        </div>
+                        <div class="exp-dot"></div>
+                    </div>
+                </a>
+
+                <!-- Machine Learning Specialization -->
+                <a href="https://www.coursera.org/account/accomplishments/specialization/KJRE294U9SFY" target="_blank" class="cert-item-link">
+                    <div class="exp-item cert-item">
+                        <div class="cert-preview">
+                            <img src="certificates/stanford_ml.png" alt="Machine Learning Specialization Certificate" class="cert-image">
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-date">Aug 2023</div>
+                            <h3>Machine Learning Specialization</h3>
+                            <p>DeepLearning.AI (Coursera)<br>Credential ID: KJRE294U9SFY</p>
+                            <p>Skills: Algorithm Development, Algorithms, Jupyter, Bash, NumPy, Decision Trees, Machine Learning, Supervised Learning, Unsupervised Learning, Deep Learning</p>
+                        </div>
+                        <div class="exp-dot"></div>
+                    </div>
+                </a>
+
+                <!-- Algorithms Specialization -->
+                <a href="https://www.coursera.org/account/accomplishments/specialization/MWKZ6E2NHFE9" target="_blank" class="cert-item-link">
+                    <div class="exp-item cert-item">
+                        <div class="cert-preview">
+                            <img src="certificates/stanford_algos.png" alt="Algorithms Specialization Certificate" class="cert-image">
+                        </div>
+                        <div class="exp-content">
+                            <div class="exp-date">Feb 2023</div>
+                            <h3>Algorithms Specialization</h3>
+                            <p>Stanford University (Coursera)<br>Credential ID: MWKZ6E2NHFE9</p>
+                            <p>Skills: Algorithm Development, Algorithms, Visual Studio, Bash, Decision Trees, Graph Theory</p>
+                        </div>
+                        <div class="exp-dot"></div>
                     </div>
                 </a>
 
             </div>
         </section>
 
+        <section class="section" id="icpc">
+            <h2 class="section-label">ICPC COMPETITIVE PROGRAMMING</h2>
+            <div class="exp-content" style="max-width:900px; margin:0 auto; padding:32px;">
+                <div style="margin-bottom:16px;">
+                    <h3 style="display:inline; margin-left:12px;">ICPC Team Member | Competitive Programmer</h3>
+                </div>
+                <p style="color:var(--text-dim); margin-bottom:8px;">Olin ICPC · Feb 2026 – Present</p>
+                <p>Solving complex algorithmic problems under strict time constraints, focusing on data structures (segment trees, fenwick trees), algorithms (graphs, dynamic programming, string algorithms, network flow, searching/sorting), and geometry.</p>
+                <p>Participating in virtual contests to practice managing time, problem solving, and debugging.</p>
+            </div>
+        </section>
+
+        <section class="section" id="research">
+            <h2 class="section-label">RESEARCH AND PUBLICATIONS</h2>
+            <div class="timeline">
+                <a href="https://doi.org/10.58445/rars.2876" target="_blank" class="publication-link">
+                    <div class="exp-item">
+                        <div class="exp-content">
+                            <div class="exp-date">Aug 4, 2025</div>
+                            <h3>C++ Memory Safety and Integrity Evaluation</h3>
+                            <p>Research Archive of Rising Scholars</p>
+                            <p>This paper analyzes C++'s memory model and puts it through rigorous testing, comparing memory usage and resistance to leaks between different types of programming techniques, datatypes, and sanitizers, and compares the results to Java, which has an automated JVM and garbage collector.</p>
+                        </div>
+                        <div class="exp-dot"></div>
+                    </div>
+                </a>
+
+                <a href="https://doi.org/10.58445/rars.1783" target="_blank" class="publication-link">
+                    <div class="exp-item">
+                        <div class="exp-content">
+                            <div class="exp-date">Oct 18, 2024</div>
+                            <h3>Performance Evaluation of C++ and Java Programs for Portable Devices</h3>
+                            <p>Research Archive of Rising Scholars</p>
+                            <p>This paper analyzes the performance of C++ and Java in an Android environment, measuring their runtime and memory usage between various searching and sorting algorithms. The goal of this paper is to emphasize the potential of using C++ more in app and program development in resource-intensive tasks, where Java could potentially lag behind.</p>
+                        </div>
+                        <div class="exp-dot"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
+        <div class="social-links">
+            <a href="https://github.com/happysmaran" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/smaran-vallabhaneni" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="Smaran_Vallabhaneni_Resume.pdf" target="_blank" aria-label="Resume">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a href="mailto:smaranvallabhaneni@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
         <p>SMARAN VALLABHANENI // 2026</p>
     </footer>
 
     <script>
-        // Scroll reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -146,7 +452,6 @@
 
         document.querySelectorAll('.hero, .section').forEach(el => observer.observe(el));
 
-        // Custom cursor?
         const cursor = document.querySelector('.cursor');
         document.addEventListener('mousemove', e => {
             cursor.style.left = e.clientX + 'px';
@@ -154,7 +459,36 @@
         });
         document.addEventListener('mousedown', () => cursor.classList.add('active'));
         document.addEventListener('mouseup', () => cursor.classList.remove('active'));
-    </script>
 
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMenu = document.querySelector('.close-menu');
+
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
