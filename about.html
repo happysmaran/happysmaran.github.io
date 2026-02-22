@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="gradient-bg"></div>
     <div class="cursor"></div>
 
     <nav>
@@ -26,6 +25,7 @@
                     <a href="index.html">Home</a>
                     <a href="about.html" class="active">About</a>
                     <a href="index.html#skills">Skills</a>
+                    <a href="Smaran_Vallabhaneni_Resume.pdf">Resume</a>
                     <a href="index.html#projects">Projects</a>
                     <a href="index.html#certifications">Certifications</a>
                     <a href="index.html#research">Research & Publications</a>
@@ -33,6 +33,18 @@
             </div>
         </div>
     </nav>
+
+    <div class="mobile-menu">
+        <button class="close-menu" aria-label="Close menu">&times;</button>
+        <div class="mobile-menu-inner">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#certifications">Certifications</a>
+            <a href="index.html#research">Research & Publications</a>
+        </div>
+    </div>
 
     <main class="container">
         <section class="section about-section" style="padding-top: 140px; padding-bottom: 100px;">
@@ -42,9 +54,7 @@
                     
                     <p style="color: var(--text-dim);">I'm especially passionate about integrating AI into real-world applications. Namely, building and deploying LLM-powered workflows, RAG systems, NLP, computer vision, and machine learning pipelines that make products smarter and more context-aware. Through tools like API integrations (Ollama, HuggingFace), CI/CD pipelines, and cloud platforms such as AWS and GCP, I focus on delivering production-ready solutions efficiently, and I thrive on turning complex challenges into seamless, intuitive experiences.</p>
 
-                    <p>
-                         I'm currently seeking internship opportunities (remote or hybrid) where I can collaborate, learn, and contribute meaningfully to impactful projects.
-                    </p>
+                    <p>I'm currently seeking internship opportunities (remote or hybrid) where I can collaborate, learn, and contribute meaningfully to impactful projects.</p>
                 </div>
 
                 <div class="about-photo">
@@ -63,7 +73,7 @@
                 <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="Smaran_Vallabhaneni_Resume.pdf" target="_blank" aria-label="Resume">
-                <i class="fas fa-file-pdf"></i>
+                <i class="fas fa-file-lines"></i>
             </a>
             <a href="mailto:smaranvallabhaneni@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
@@ -93,7 +103,6 @@
 
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
-        const closeMenu = document.querySelector('.close-menu');
 
         if (hamburger && mobileMenu) {
             hamburger.addEventListener('click', () => {
@@ -101,7 +110,7 @@
                 mobileMenu.classList.toggle('active');
             });
 
-            closeMenu.addEventListener('click', () => {
+            document.querySelector('.close-menu')?.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
             });
