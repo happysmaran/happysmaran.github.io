@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="cursor"></div>
 
     <nav>
         <div class="container">
@@ -35,11 +34,12 @@
     </nav>
 
     <div class="mobile-menu">
-        <button class="close-menu" aria-label="Close menu">&times;</button>
+        <button class="close-menu" aria-label="Close menu">×</button>
         <div class="mobile-menu-inner">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="index.html#skills">Skills</a>
+            <a href="Smaran_Vallabhaneni_Resume.pdf">Resume</a>
             <a href="index.html#projects">Projects</a>
             <a href="index.html#certifications">Certifications</a>
             <a href="index.html#research">Research & Publications</a>
@@ -53,9 +53,9 @@
             <p class="hero-sub main-tagline">Engineering in Computing Student @ Olin College of Engineering</p>
             <p class="hero-sub degree-line">SOFTWARE | SYSTEMS | MATH | AI INTEGRATION | DATA SCIENCE | ICPC</p>
 
-            <div class="bio-glass">
-                <p>I'm a first-year engineering student passionate about crafting scalable systems and pushing the boundaries of AI in real-world applications. With a strong foundation in full-stack development and backend architecture, I specialize in building smart, data-driven solutions, from LLM-powered workflows to RAG / machine learning pipelines.</p>
-            </div>
+            <p class="hero-bio">
+                I'm a first-year engineering student passionate about crafting scalable systems and pushing the boundaries of AI in real-world applications. With a strong foundation in full-stack development and backend architecture, I specialize in building smart, data-driven solutions, from LLM-powered workflows to RAG / machine learning pipelines.
+            </p>
         </section>
 
         <section class="section" id="skills">
@@ -181,7 +181,6 @@
             <h2 class="section-label">FEATURED PROJECTS</h2>
             <div class="bento-grid">
 
-                <!-- CLOS -->
                 <a href="https://happysmaran.github.io/CLOS/" target="_blank" class="bento-item project-link">
                     <img class="bento-img" src="clos.png" alt="CLOS">
                     <div class="bento-overlay">
@@ -208,7 +207,6 @@
                     </div>
                 </a>
 
-                <!-- ClassicTunes -->
                 <a href="https://happysmaran.github.io/ClassicTunes/" target="_blank" class="bento-item project-link">
                     <img class="bento-img" src="classictunes.png" alt="ClassicTunes">
                     <div class="bento-overlay">
@@ -237,7 +235,6 @@
                     </div>
                 </a>
 
-                <!-- MouseSteering -->
                 <a href="https://github.com/happysmaran/mousesteering" target="_blank" class="bento-item project-link">
                     <img class="bento-img" src="mousesteer.jpg" alt="MouseSteering">
                     <div class="bento-overlay">
@@ -254,7 +251,6 @@
                     </div>
                 </a>
 
-                <!-- Whoa-Scope -->
                 <a href="https://github.com/rivques/whoa-scope" target="_blank" class="bento-item project-link">
                     <img class="bento-img" src="whoascope.png" alt="Whoa-Scope">
                     <div class="bento-overlay">
@@ -415,6 +411,7 @@
                 </a>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -426,7 +423,7 @@
                 <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="Smaran_Vallabhaneni_Resume.pdf" target="_blank" aria-label="Resume">
-                <i class="fas fa-file-lines"></i>
+                <i class="fas fa-address-card"></i>
             </a>
             <a href="mailto:smaranvallabhaneni@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
@@ -436,24 +433,6 @@
     </footer>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.hero, .section').forEach(el => observer.observe(el));
-
-        const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-        document.addEventListener('mousedown', () => cursor.classList.add('active'));
-        document.addEventListener('mouseup', () => cursor.classList.remove('active'));
-
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
 
