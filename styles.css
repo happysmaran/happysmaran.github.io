@@ -281,6 +281,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 6px 8px;
+    margin-top: 12px;
     margin-bottom: 12px;
 }
 
