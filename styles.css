@@ -59,6 +59,7 @@ nav {
     text-decoration: none;
     margin-left: 28px;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
@@ -265,6 +266,7 @@ nav {
     color: inherit;
     display: block;
     background: rgb(31,31,31);
+    transition: all 0.3s ease;
 }
 
 .bento-img {
@@ -340,6 +342,7 @@ nav {
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 32px 28px;
+    transition: all 0.3s ease;
 }
 
 .exp-content,
@@ -363,6 +366,20 @@ nav {
     border-color: var(--accent);
 }
 
+@media (min-width: 1001px) {
+    .exp-content:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 32px rgba(0, 102, 204, 0.15);
+    }
+
+    .cert-item-link:hover .exp-content h3,
+    .cert-item-link:hover .exp-content p,
+    .exp-item.cert-item:hover .exp-content h3,
+    .exp-item.cert-item:hover .exp-content p {
+        color: inherit !important;
+    }
+}
+
 .exp-date {
     font-size: 0.95rem;
     color: var(--text-light);
@@ -384,6 +401,7 @@ nav {
 
 .cert-preview {
     margin: 0 0 36px 0 !important;
+    transition: transform 0.3s ease;
 }
 
 .cert-image {
@@ -392,9 +410,9 @@ nav {
     border-radius: 8px;
     border: 1px solid var(--border);
     display: block;
+    transition: transform 0.3s ease;
 }
 
-/* About page */
 .about-section {
     min-height: 80vh;
 }
@@ -676,5 +694,22 @@ footer {
 @media (min-width: 1001px) {
     .exp-item.cert-item {
         gap: 60px;
+    }
+
+    .bento-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 32px rgba(0, 102, 204, 0.15);
+        border-color: var(--accent);
+    }
+
+    .cert-item-link:hover .cert-preview,
+    .cert-item-link:hover .exp-content,
+    .exp-item.cert-item:hover .cert-preview,
+    .exp-item.cert-item:hover .exp-content {
+        transform: translateY(-8px);
+    }
+
+    .cert-item-link:hover a {
+        color: var(--text) !important;
     }
 }
