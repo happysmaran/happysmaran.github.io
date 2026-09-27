@@ -201,6 +201,30 @@ nav {
     font-weight: 500;
 }
 
+.view-all-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.view-all-link {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.view-all-link:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
 /* Skills */
 .group-heading {
     font-size: 1.4rem;
@@ -307,37 +331,10 @@ nav {
     color: var(--text-light);
 }
 
-/* Timeline */
-.timeline {
-    position: relative;
+/* Generic content card (used by ICPC section) */
+.exp-content {
     max-width: 900px;
     margin: 0 auto;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: var(--border);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.exp-item {
-    display: flex;
-    align-items: center;
-    margin: 70px 0;
-    position: relative;
-}
-
-.exp-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.exp-content {
-    width: 45%;
     background: rgb(31,31,31);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -376,46 +373,126 @@ nav {
         transform: translateY(-8px);
         box-shadow: 0 16px 32px rgba(0, 102, 204, 0.15);
     }
-    
-    /* Smooth explicit color change for elements within layout wrappers on hover */
-    .cert-item-link:hover .exp-content h3,
-    .publication-link:hover .exp-content h3 {
-        color: var(--link) !important;
-    }
 }
 
-.exp-date {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    margin-bottom: 14px;
-    transition: color 0.3s ease;
+/* Publications */
+.pub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.exp-dot {
-    width: var(--dot-size);
-    height: var(--dot-size);
-    background: var(--accent);
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    border: 4px solid white;
-    box-shadow: 0 0 0 5px rgba(0, 102, 204, 0.12);
-}
-
-.cert-preview {
-    margin: 0 0 36px 0 !important;
-    transition: transform 0.3s ease;
-}
-
-.cert-image {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 8px;
+.pub-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 28px;
     border: 1px solid var(--border);
-    display: block;
-    transition: transform 0.3s ease;
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    background: rgb(31,31,31);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pub-card-date {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.pub-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.pub-card-source {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.pub-card-summary {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Certifications */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgb(31,31,31);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-thumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.cert-thumb-img {
+    max-width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.cert-card-date {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--accent);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cert-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 24px 24px;
+}
+
+.cert-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.cert-card-issuer {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.cert-card-skills {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.5;
 }
 
 .about-section {
@@ -542,10 +619,6 @@ footer {
         font-size: 0.92rem;
     }
 
-    .exp-date {
-        font-size: 0.85rem;
-    }
-
     .about-text p {
         font-size: 0.85rem;
     }
@@ -583,28 +656,13 @@ footer {
         min-width: auto;
     }
 
-    .timeline::before {
-        display: none;
-    }
-
-    .exp-item,
-    .exp-item:nth-child(even) {
-        flex-direction: column;
-        align-items: stretch;
-        margin: 56px 0;
-    }
-
     .exp-content {
-        width: 100%;
         padding: 28px 20px;
     }
 
-    .exp-dot {
-        display: none;
-    }
-
-    .cert-preview {
-        margin-bottom: 32px !important;
+    .cert-grid,
+    .pub-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -662,68 +720,23 @@ footer {
     }
 }
 
-/* Links */
-.timeline a,
-.timeline a:link,
-.timeline a:visited,
-.cert-item-link,
-.cert-item-link a,
-.cert-item-link a:link,
-.cert-item-link a:visited,
-.publication-link,
-.publication-link a,
-.publication-link a:link,
-.publication-link a:visited {
-    color: var(--text) !important;
-    text-decoration: none !important;
-    border-bottom: none !important;
-    background: none !important;
-    cursor: pointer;
-}
-
-.timeline a:hover,
-.timeline a:focus,
-.cert-item-link a:hover,
-.cert-item-link a:focus,
-.publication-link a:hover,
-.publication-link a:focus {
-    color: var(--link) !important;
-    text-decoration: none !important;
-}
-
-.timeline a:visited,
-.cert-item-link a:visited,
-.publication-link a:visited {
-    color: var(--text) !important;
-}
-
 @media (min-width: 1001px) {
-    .exp-item.cert-item {
-        gap: 60px;
-    }
-
     .bento-item:hover {
         transform: translateY(-8px);
         box-shadow: 0 16px 32px rgba(0, 102, 204, 0.15);
         border-color: var(--accent);
     }
 
-    .cert-item-link:hover .cert-preview,
-    .cert-item-link:hover .exp-content,
-    .exp-item.cert-item:hover .cert-preview,
-    .exp-item.cert-item:hover .exp-content {
-        transform: translateY(-8px);
+    .cert-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(0, 102, 204, 0.15);
+        border-color: var(--accent);
     }
 
-    .cert-item-link:hover .exp-content h3,
-    .cert-item-link:hover .exp-content p,
-    .cert-item-link:hover .exp-content div,
-    .cert-item-link:hover .exp-content li,
-    .publication-link:hover .exp-content h3,
-    .publication-link:hover .exp-content p,
-    .publication-link:hover .exp-content div,
-    .publication-link:hover .exp-content li {
-        color: var(--link) !important;
+    .pub-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(0, 102, 204, 0.15);
+        border-color: var(--accent);
     }
 }
 
