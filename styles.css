@@ -331,7 +331,7 @@ nav {
     color: var(--text-light);
 }
 
-/* Generic content card (used by ICPC section) */
+/* Generic content card */
 .exp-content {
     max-width: 900px;
     margin: 0 auto;
@@ -744,5 +744,199 @@ footer {
     .skill-tag:hover {
         color: var(--link);
         border-color: var(--accent);
+    }
+}
+
+/* Experiences */
+/* Roles overlap in time, so each is a self-contained card in the same style as the project and certificate cards. */
+.exp-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.exp-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgb(31,31,31);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.exp-when {
+    line-height: 1;
+}
+
+/* Same pill as the certificate date so the two sections read as one system. */
+.exp-date {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--accent);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.exp-main {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.exp-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Logos often ship on an opaque white square; rounding keeps it from reading as a stray box on the dark page. */
+.exp-logo {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.exp-item h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.exp-card-org {
+    font-size: 0.92rem;
+    color: var(--text-light);
+}
+
+.exp-points {
+    padding-left: 18px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    max-width: 780px;
+}
+
+.exp-points li + li {
+    margin-top: 6px;
+}
+
+.exp-item .pills-container {
+    margin: 0;
+}
+
+/* Full LinkedIn skill names can be long enough to overflow a phone-width card if pills refuse to wrap. */
+.exp-item .pill {
+    white-space: normal;
+}
+
+.exp-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.exp-slot {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    align-content: start;
+    min-width: 0;
+}
+
+/* Placeholder and media share one grid cell so a missing file simply leaves the placeholder showing. */
+.exp-slot::before {
+    content: "\f03e";
+    grid-area: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16 / 9;
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    background: rgb(31,31,31);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--border);
+}
+
+.exp-slot img,
+.exp-slot video {
+    grid-area: 1 / 1;
+    width: 100%;
+    /* A fixed ratio keeps every tile the same height whatever shape the source photo is. */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 0;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s ease;
+}
+
+.exp-slot:hover img,
+.exp-slot:hover video {
+    border-color: var(--accent);
+}
+
+.exp-slot figcaption {
+    grid-area: 2 / 1;
+    font-size: 0.78rem;
+    color: var(--text-light);
+}
+
+.exp-slot figcaption:empty {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .exp-item {
+        padding: 20px;
+    }
+
+    /* Swipeable strip keeps tiles large instead of shrinking three screenshots into thumbnails. */
+    .exp-gallery {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 6px;
+    }
+
+    .exp-slot {
+        scroll-snap-align: start;
+    }
+}
+
+@media (min-width: 1001px) {
+    .exp-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(0, 102, 204, 0.15);
+        border-color: var(--accent);
+    }
+}
+
+/* One photo per card on phones: a single full-width image stays legible where a swipe strip of cropped tiles would not. */
+@media (max-width: 700px) {
+    .exp-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
+        overflow: visible;
+    }
+
+    .exp-slot:not(:first-child) {
+        display: none;
     }
 }

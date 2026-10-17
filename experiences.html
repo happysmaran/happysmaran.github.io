@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | Smaran Vallabhaneni</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <a href="index.html" class="logo">S_VALLABHANENI</a>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-links desktop-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="index.html#skills">Skills</a>
+                    <a href="Smaran_Vallabhaneni_Resume.pdf">Resume</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="certifications.html">Certifications</a>
+                    <a href="experiences.html">Experiences</a>
+                    <a href="index.html#research">Research & Publications</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <button class="close-menu" aria-label="Close menu">×</button>
+        <div class="mobile-menu-inner">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="Smaran_Vallabhaneni_Resume.pdf">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="index.html#research">Research & Publications</a>
+        </div>
+    </div>
+
+    <main class="container" style="padding-top: 140px;">
+
+        <section class="section" id="experiences">
+            <h2 class="section-label">ALL EXPERIENCES</h2>
+            <!-- Media lives in /experiences: {logo}-logo.png for the header logo and {role}-1..3.png for gallery tiles.
+                 A missing file removes its <img>, leaving the dashed placeholder, so slots can be filled one at a time.
+                 To show a video in a tile, swap its <img> for <video src="experiences/..." controls muted playsinline>. -->
+            <div class="exp-timeline">
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">Sep 2026 – Present</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/olin-logo.png" alt="Franklin W. Olin College of Engineering logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>Digital Experience Designer and Web Platform Engineer</h3>
+                                <p class="exp-card-org">Franklin W. Olin College of Engineering · Part-time · Needham, MA</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Redesigning and redeveloping three websites from the ground up (OSCAC, The Michael E. Moody Organization, and a professor's personal art portfolio) using WordPress with custom CSS and PHP, as the sole engineer and designer across all three.</li>
+                            <li>Managing and curating existing and incoming content across exhibitions, events, and visual media archives spanning Olin's art and photography program catalog.</li>
+                            <li>Architecting and maintaining the full platform lifecycle, from design system decisions to deployment and content architecture, on BlueHost-hosted infrastructure.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Debugging</span>
+                            <span class="pill">JavaScript</span>
+                            <span class="pill">Continuous Integration and Continuous Delivery (CI/CD)</span>
+                            <span class="pill">User Experience Design (UED)</span>
+                            <span class="pill">HTML</span>
+                            <span class="pill">Cascading Style Sheets (CSS)</span>
+                            <span class="pill">Database Management System (DBMS)</span>
+                            <span class="pill">Databases</span>
+                            <span class="pill">Testing</span>
+                            <span class="pill">WordPress</span>
+                            <span class="pill">Database Systems</span>
+                        </div>
+                        <div class="exp-gallery">
+                            <figure class="exp-slot"><img src="experiences/web-1.png" alt="Olin Art Site" loading="lazy" onerror="this.remove()"><figcaption>Olin Art site</figcaption></figure>
+                            <figure class="exp-slot"><img src="experiences/web-2.png" alt="Moody OSCAC site" loading="lazy" onerror="this.remove()"><figcaption>Moody OSCAC Website</figcaption></figure>
+                            <figure class="exp-slot"><img src="experiences/web-3.png" alt="Art portfolio site" loading="lazy" onerror="this.remove()"><figcaption>Art portfolio site</figcaption></figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">Sep 2026 – Present</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/ofrl-logo.jpeg" alt="Olin Field Robotics Lab logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>Robotics Software Engineer</h3>
+                                <p class="exp-card-org">Olin Field Robotics Lab · Part-time · Needham, MA</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Overhauling and rebuilding the ROS2 software stack for the GroundFleet soil sampling rover, a farm-ng Amiga platform with an onboard Intel NUC coordinating drive control, robotic arm actuation, and onboard soil analysis.</li>
+                            <li>Developing a semantic segmentation pipeline for real-time crop and farmland layout detection, enabling the rover to autonomously identify and avoid active crop rows during field operation.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Python (Programming Language)</span>
+                            <span class="pill">Git</span>
+                            <span class="pill">Debugging</span>
+                            <span class="pill">Deep Learning</span>
+                            <span class="pill">Embedded Linux</span>
+                            <span class="pill">Machine Learning</span>
+                            <span class="pill">C (Programming Language)</span>
+                            <span class="pill">Applied Machine Learning</span>
+                            <span class="pill">Classification Algorithms</span>
+                            <span class="pill">Robot Operating System (ROS)</span>
+                            <span class="pill">Linux Kernel</span>
+                            <span class="pill">Algorithms</span>
+                            <span class="pill">C++</span>
+                            <span class="pill">Testing</span>
+                            <span class="pill">Embedded Software Programming</span>
+                            <span class="pill">Computer Vision</span>
+                        </div>
+                        <div class="exp-gallery">
+                            <figure class="exp-slot"><img src="experiences/robotics-1.png" alt="GroundFleet rover" loading="lazy" onerror="this.remove()"><figcaption>GroundFleet rover</figcaption></figure>
+                            <figure class="exp-slot"><img src="experiences/robotics-2.png" alt="Robotic arm" loading="lazy" onerror="this.remove()"><figcaption>ROS2 Code</figcaption></figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">Jun 2026 – Present</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/aero-logo.jpeg" alt="Olin AERO logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>Software Engineering Lead</h3>
+                                <p class="exp-card-org">Olin AERO · Needham, MA</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Software Co-Lead overseeing the full autonomy stack for an sUAS competing in AUVSI SUAS: image recognition, image stitching, flight planning, autopilot integration, and ground station systems.</li>
+                            <li>Leading 6 software engineers directly; driving bi-weekly cross-functional integration cycles across 15-20 mechanical and electrical engineers to synchronize airframe iterations with software.</li>
+                            <li>Maintaining telemetry architecture (ArduPilot, MissionPlanner, ROS, MAVROS, NVIDIA Jetson) with sub-100ms round-trip latency and a stable 20 FPS stream at 10-mile field range.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Git</span>
+                            <span class="pill">Debugging</span>
+                            <span class="pill">Algorithm Development</span>
+                            <span class="pill">Jupyter</span>
+                            <span class="pill">Machine Learning</span>
+                            <span class="pill">Unix</span>
+                            <span class="pill">Raspberry Pi</span>
+                            <span class="pill">Robot Operating System (ROS)</span>
+                            <span class="pill">Docker</span>
+                            <span class="pill">Arduino</span>
+                            <span class="pill">Bash</span>
+                            <span class="pill">Supervised Learning</span>
+                            <span class="pill">NumPy</span>
+                            <span class="pill">ArduPilot</span>
+                            <span class="pill">Algorithms</span>
+                            <span class="pill">Testing</span>
+                            <span class="pill">Visual Studio</span>
+                        </div>
+                        <div class="exp-gallery">
+                            <figure class="exp-slot"><img src="experiences/aero-lead-1.png" alt="Airframe" loading="lazy" onerror="this.remove()"><figcaption>Cardboard Demo Airframe</figcaption></figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">May 2026 – Present</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/olin-logo.png" alt="Franklin W. Olin College of Engineering logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>Club Chair / CCO</h3>
+                                <p class="exp-card-org">Franklin W. Olin College of Engineering · Needham, MA</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Overseeing operations and governance for ~60 recognized campus clubs, competitive project teams, and athletic organizations.</li>
+                            <li>Managing and allocating $63K in annual organizational funding: evaluating budget requests, approving expenditures, and monitoring multi-team spending.</li>
+                            <li>Administering institutional P-Card purchasing controls for organization leaders, enforcing financial compliance and spending accountability.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Leadership</span>
+                            <span class="pill">Budgeting</span>
+                            <span class="pill">Governance</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">Feb 2026 – Present</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/icpc-logo.png" alt="Olin ICPC logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>ICPC Team Member | Competitive Programmer</h3>
+                                <p class="exp-card-org">Olin ICPC · Needham, MA</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Solving high-difficulty algorithmic problems under strict time constraints using segment trees, Fenwick trees, DP, graph algorithms (network flow, SSSP, MST), string algorithms, and computational geometry.</li>
+                            <li>Participating in virtual contests to practice managing time, problem solving, and debugging.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Algorithms</span>
+                            <span class="pill">Data Structures</span>
+                            <span class="pill">C++</span>
+                            <span class="pill">Java</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">Sep 2025 – May 2026</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/aero-logo.jpeg" alt="Olin AERO logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>Head of Ground Station Development (Software Engineer)</h3>
+                                <p class="exp-card-org">Olin AERO · Needham, MA</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Independently architected the ground station software stack integrating ArduPilot, MissionPlanner, ROS, and MAVROS to bridge an onboard NVIDIA Jetson with ground controls.</li>
+                            <li>Engineered a fly-by-wire telemetry pipeline with sub-100ms round-trip latency for real-time sensor monitoring and safety interlock enforcement.</li>
+                            <li>Achieved a stable 20 FPS telemetry stream across a 10-mile field testing range.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Git</span>
+                            <span class="pill">Debugging</span>
+                            <span class="pill">Algorithm Development</span>
+                            <span class="pill">Jupyter</span>
+                            <span class="pill">Machine Learning</span>
+                            <span class="pill">Unix</span>
+                            <span class="pill">Raspberry Pi</span>
+                            <span class="pill">Robot Operating System (ROS)</span>
+                            <span class="pill">Docker</span>
+                            <span class="pill">Arduino</span>
+                            <span class="pill">Bash</span>
+                            <span class="pill">Supervised Learning</span>
+                            <span class="pill">NumPy</span>
+                            <span class="pill">ArduPilot</span>
+                            <span class="pill">Algorithms</span>
+                            <span class="pill">Testing</span>
+                            <span class="pill">Visual Studio</span>
+                        </div>
+                        <div class="exp-gallery">
+                            <figure class="exp-slot"><img src="experiences/aero-gs-1.jpeg" alt="Prototype drone" loading="lazy" onerror="this.remove()"><figcaption>Prototype drone</figcaption></figure>
+                            <figure class="exp-slot"><img src="experiences/aero-gs-2.jpeg" alt="Station prototype" loading="lazy" onerror="this.remove()"><figcaption>Station</figcaption></figure>
+                            <figure class="exp-slot"><img src="experiences/aero-gs-3.jpeg" alt="MAVROS programming" loading="lazy" onerror="this.remove()"><figcaption>MAVROS programming</figcaption></figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">Apr 2023 – Present</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/clos-logo.jpeg" alt="CLOS logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>Founding Engineer and Principal Architect</h3>
+                                <p class="exp-card-org">CLOS · Self-employed · Remote</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Founded CLOS (closapp.org): an offline-first, zero-account math and scientific computing platform serving ~1500 weekly active users across Windows, macOS, and Linux.</li>
+                            <li>Engineered 8 core subsystems from scratch in Java: custom DB engine, symbolic math parser, scripting language, 3D renderer, terminal emulator, matrix library, logic gate simulator, and symbolic calculus processor.</li>
+                            <li>Achieves 60 FPS rendering and sub-50ms latency on multi-variable calculus; the custom scripting language supports user-defined computation workflows.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Git</span>
+                            <span class="pill">Debugging</span>
+                            <span class="pill">Java</span>
+                            <span class="pill">Probability</span>
+                            <span class="pill">Algorithm Development</span>
+                            <span class="pill">Continuous Integration and Continuous Delivery (CI/CD)</span>
+                            <span class="pill">Artificial Intelligence (AI)</span>
+                            <span class="pill">Entrepreneurship</span>
+                            <span class="pill">User Experience Design (UED)</span>
+                            <span class="pill">HTML</span>
+                            <span class="pill">Unix</span>
+                            <span class="pill">Graph Theory</span>
+                            <span class="pill">Ollama</span>
+                            <span class="pill">Docker</span>
+                            <span class="pill">GitHub Copilot</span>
+                            <span class="pill">Bash</span>
+                            <span class="pill">Calculus</span>
+                            <span class="pill">Data Structures</span>
+                            <span class="pill">Cascading Style Sheets (CSS)</span>
+                            <span class="pill">Decision Trees</span>
+                            <span class="pill">Version Control</span>
+                            <span class="pill">Databases</span>
+                            <span class="pill">Data Science</span>
+                            <span class="pill">C++</span>
+                            <span class="pill">Testing</span>
+                            <span class="pill">Eclipse</span>
+                            <span class="pill">Visual Studio</span>
+                            <span class="pill">IntelliJ IDEA</span>
+                        </div>
+                        <div class="exp-gallery">
+                            <figure class="exp-slot"><img src="experiences/clos-1.png" alt="Main screen" loading="lazy" onerror="this.remove()"><figcaption>Main screen</figcaption></figure>
+                            <figure class="exp-slot"><img src="experiences/clos-2.png" alt="AI tutor screen" loading="lazy" onerror="this.remove()"><figcaption>AI tutor screen</figcaption></figure>
+                            <figure class="exp-slot"><img src="experiences/clos-3.png" alt="3D graphing demo" loading="lazy" onerror="this.remove()"><figcaption>3D graphing demo</figcaption></figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exp-item">
+                    <div class="exp-when"><span class="exp-date">Apr 2024 – Apr 2025</span></div>
+                    <div class="exp-main">
+                        <header class="exp-head">
+                            <img src="experiences/gil-logo.jpeg" alt="Geeky Insights logo" class="exp-logo" onerror="this.remove()">
+                            <div>
+                                <h3>Mobile Platform Engineer</h3>
+                                <p class="exp-card-org">Geeky Insights · Internship · Remote</p>
+                            </div>
+                        </header>
+                        <ul class="exp-points">
+                            <li>Designed the complete UI/UX for a customizable audio alarm clock app in Figma and Adobe Creative Suite.</li>
+                            <li>Implemented the full front-end and backend in Flutter, Dart, and Java; optimized the build pipeline into a 15 MB release build.</li>
+                            <li>Profiled and restructured memory layout for Android 9+ low-resource devices, reducing RAM to match the baseline footprint of Android's native system clock.</li>
+                        </ul>
+                        <div class="pills-container">
+                            <span class="pill">Debugging</span>
+                            <span class="pill">Java</span>
+                            <span class="pill">Android Development</span>
+                            <span class="pill">Algorithm Development</span>
+                            <span class="pill">Unix</span>
+                            <span class="pill">Dart</span>
+                            <span class="pill">Databases</span>
+                            <span class="pill">Flutter</span>
+                            <span class="pill">Algorithms</span>
+                            <span class="pill">Visual Studio</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/happysmaran" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/smaran-vallabhaneni" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="Smaran_Vallabhaneni_Resume.pdf" target="_blank" aria-label="Resume">
+                <i class="fas fa-address-card"></i>
+            </a>
+            <a href="mailto:smaranvallabhaneni@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p>SMARAN VALLABHANENI // 2026</p>
+        <p style="margin-top: 15px;">
+            <a href="directory.html" style="color: var(--text-light); text-decoration: none; font-size: 0.85rem; opacity: 0.7;">Site Directory</a>
+        </p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            document.querySelector('.close-menu')?.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
